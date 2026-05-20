@@ -1,133 +1,195 @@
-# d2c-rfm-segmentation
+# D2C Customer Churn Intelligence — Part 2: RFM Segmentation & Retention Strategy
 
-# D2C Customer Churn Capstone — Part 2: RFM Segmentation & Customer Analysis
+## Business Problem
 
-## Project Overview
+A Direct-to-Consumer (D2C) personal-care brand wants to improve customer retention by identifying:
 
-This project focuses on customer segmentation using the RFM (Recency, Frequency, Monetary) framework for a Direct-to-Consumer (D2C) business.
+- high-value customers,
+- early churn-risk users,
+- declining engagement patterns,
+- and customers requiring targeted retention intervention.
 
-The objective of this analysis is to identify valuable customers, detect churn-risk users, and generate actionable business insights using customer purchasing behavior.
+Traditional blanket discount campaigns often reduce profitability without improving long-term customer retention.
 
-The project helps businesses understand:
-- which customers are most valuable,
-- which customers are at risk,
-- which users spend the most,
-- how retention strategies can be improved.
-
----
-
-## Objectives
-
-The main objectives of this project are:
-
-- perform RFM analysis,
-- calculate Recency, Frequency, and Monetary metrics,
-- assign RFM scores to customers,
-- segment customers into business-focused categories,
-- generate retention strategies,
-- export segmented customer data for future use.
+This project applies RFM (Recency, Frequency, Monetary) analysis combined with behavioral interpretation to build business-oriented customer segments for retention planning and customer intelligence.
 
 ---
 
-## Repository Structure
+# Project Objectives
+
+The primary objectives of this project are to:
+
+- calculate customer-level RFM metrics,
+- identify valuable and churn-risk customer groups,
+- build business-oriented customer segments,
+- prioritize retention opportunities,
+- analyze customer-value distribution,
+- investigate segmentation limitations,
+- and generate actionable retention strategies.
+
+---
+
+# Datasets Used
+
+Primary datasets used:
+
+| Dataset | Purpose |
+|---|---|
+| `customers.csv` | Customer profile information |
+| `orders.csv` | Transaction history for RFM calculation |
+
+Additional reference datasets:
+
+| Dataset | Purpose |
+|---|---|
+| `support_tickets.csv` | Customer dissatisfaction analysis |
+| `web_events_snapshot.csv` | Engagement behavior validation |
+| `churn_labels.csv` | Churn-risk interpretation |
+| `intervention_history.csv` | Historical retention activity |
+
+---
+
+# RFM Framework
+
+## Recency (R)
+
+Measures how recently a customer made a purchase.
+
+Customers with recent activity are generally more engaged and easier to retain.
+
+---
+
+## Frequency (F)
+
+Measures how often a customer purchases.
+
+Higher purchase frequency often indicates stronger customer loyalty and product engagement.
+
+---
+
+## Monetary (M)
+
+Measures total customer spending.
+
+High monetary customers contribute disproportionately to revenue and often require specialized retention strategies.
+
+---
+
+# Customer Segments Created
+
+The project segments customers into business-focused categories:
+
+| Segment | Description |
+|---|---|
+| Champions | Highly active, high-frequency, high-value customers |
+| Loyal Customers | Consistent repeat buyers with stable engagement |
+| Big Spenders | High monetary contribution customers |
+| Recent Customers | Newly active customers with growth potential |
+| Regular Customers | Moderate-value and average-engagement customers |
+| At Risk Customers | Customers showing declining activity and churn indicators |
+
+---
+
+# Business-Focused Segmentation Approach
+
+This project goes beyond textbook RFM scoring by considering:
+
+- customer engagement behavior,
+- churn-risk interpretation,
+- support dissatisfaction patterns,
+- inactivity signals,
+- and retention prioritization logic.
+
+The analysis also highlights situations where traditional RFM segmentation alone may fail to capture true customer risk.
+
+Example:
+
+- a high-spending customer with declining engagement may still require churn intervention,
+- while a recent low-frequency customer may not necessarily represent retention risk.
+
+---
+
+# Key Analytical Areas Covered
+
+The notebook includes:
+
+- RFM metric generation,
+- customer scoring,
+- segment distribution analysis,
+- customer-value analysis,
+- churn-risk interpretation,
+- behavioral segmentation insights,
+- retention prioritization logic,
+- and manual-review case identification.
+
+---
+
+# Key Business Insights
+
+Some major findings from the segmentation analysis include:
+
+- High-value customers represent a disproportionately important revenue segment.
+- Certain customers show strong monetary contribution despite declining activity.
+- At Risk customers require proactive retention before becoming fully inactive.
+- Regular Customers form the largest operational segment and require scalable engagement strategies.
+- Pure RFM segmentation may miss customers affected by dissatisfaction or engagement decline.
+
+---
+
+# Manual Review Philosophy
+
+Not all customers can be accurately evaluated using automated scoring alone.
+
+The project includes manual-review scenarios for ambiguous or high-risk customer cases such as:
+
+- high-spending but declining users,
+- recently acquired high-value customers,
+- inconsistent purchasing behavior,
+- and customers with conflicting engagement signals.
+
+These cases may require additional business review before retention decisions are made.
+
+---
+
+# Repository Structure
 
 ```bash
-Part2_RFM_Segmentation/
-
-│── rfm_segmentation.ipynb
-│── segments.csv
-│── retention_strategy.md
-│── manual_review_cases.md
-│── README.md
-│── requirements.txt
+d2c-rfm-segmentation/
+│
+├── rfm_segmentation.ipynb
+├── segments.csv
+├── retention_strategy.md
+├── manual_review_cases.md
+├── README.md
+├── requirements.txt
 ```
 
 ---
 
-## Datasets Used
+# Output File
 
-The analysis uses the following datasets:
+## segments.csv
 
-- customers.csv
-- orders.csv
+The exported segmentation file contains:
 
-Additional reference datasets:
-
-- support_tickets.csv
-- web_events_snapshot.csv
-- churn_labels.csv
-- intervention_history.csv
-
----
-
-## RFM Analysis
-
-### Recency (R)
-Measures how recently a customer made a purchase.
-
-### Frequency (F)
-Measures how often a customer purchases.
-
-### Monetary (M)
-Measures total customer spending.
-
----
-
-## Customer Segments Created
-
-The following customer segments were identified:
-
-- Champions
-- Loyal Customers
-- Big Spenders
-- Recent Customers
-- At Risk Customers
-- Regular Customers
-
----
-
-## Key Insights
-
-- Regular Customers form the largest customer segment.
-- Loyal Customers contribute significantly to repeat purchases.
-- Big Spenders generate high revenue despite smaller population size.
-- At Risk customers require immediate retention campaigns.
-- Champions should receive loyalty rewards and exclusive benefits.
-
----
-
-## Visualizations Performed
-
-The notebook includes:
-
-- customer segment distribution,
-- RFM score analysis,
-- spending analysis,
-- customer behavior comparison charts.
-
----
-
-## Output File
-
-### segments.csv
-
-Contains:
 - customer_id
 - Recency
 - Frequency
 - Monetary
-- RFM Scores
-- Customer Segment
+- RFM scores
+- customer segments
 
-This file can be used for:
+This dataset can support:
+
 - retention campaigns,
+- CRM targeting,
+- churn modeling,
 - recommendation systems,
-- churn prediction models,
-- customer analytics dashboards.
+- and customer analytics dashboards.
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Python
 - Pandas
@@ -138,21 +200,21 @@ This file can be used for:
 
 ---
 
-## Installation & Setup
+# Installation & Setup
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/GuDLish/d2c-rfm-segmentation.git
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Notebook
+## Run Notebook
 
 Open:
 
@@ -160,21 +222,25 @@ Open:
 rfm_segmentation.ipynb
 ```
 
-using VS Code or Jupyter Notebook.
+using:
+- VS Code
+- Jupyter Notebook
+- or JupyterLab
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-Possible future enhancements:
-- automated customer scoring,
-- predictive churn analysis,
-- dashboard integration,
-- machine learning segmentation,
-- real-time customer analytics.
+Potential future enhancements include:
+
+- ML-based customer scoring,
+- churn probability integration,
+- automated retention prioritization,
+- dashboard deployment,
+- and real-time customer monitoring pipelines.
 
 ---
 
-## Author
+# Author
 
-Prateek Parmar
+**Prateek Parmar**
