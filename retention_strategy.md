@@ -41,9 +41,13 @@ The framework prioritizes retention efforts based on both customer value and chu
 
 ## Target Customers
 
-- Champions with churn risk
-- Big Spenders showing disengagement
-- High-value customers with declining activity
+- Champions that exhibit churn-risk/disengagement signals (e.g., recent inactivity or behavioral decline)
+- Big Spenders that exhibit disengagement signals
+- High-value customers showing declining engagement patterns
+
+## How this is triggered (high-level)
+
+This priority is intended for cases where **value impact is high** but **future retention probability is weakening** based on segment interpretation and manual-review signals.
 
 ## Business Risk
 
@@ -74,7 +78,12 @@ Retention investment should prioritize customer lifetime value instead of custom
 - customers with increasing inactivity,
 - previously active users showing behavioral decline.
 
+## How this is triggered (high-level)
+
+This priority is intended for customers where **engagement is deteriorating**, even if historical purchase/value looks stable.
+
 ## Business Risk
+
 
 These customers may silently disengage before complete churn occurs.
 
@@ -103,6 +112,10 @@ The objective is early intervention before customers become fully inactive.
 - repeated complaints,
 - reopened support tickets,
 - dissatisfied high-value customers.
+
+## How this is triggered (high-level)
+
+This priority is intended when **service dissatisfaction signals are present**, indicating churn risk may be driven by experience quality rather than purchase behavior.
 
 ## Business Risk
 
@@ -133,6 +146,10 @@ Customer trust recovery should be prioritized before promotional retention campa
 - inactive low-frequency users,
 - customers with long inactivity periods.
 
+## How this is triggered (high-level)
+
+This priority is intended for customers where **inactivity/recency is the dominant risk signal** and the recovery window is narrowing.
+
 ## Business Risk
 
 These customers are approaching full churn behavior.
@@ -161,6 +178,10 @@ Win-back spending should remain cost-efficient due to uncertain recovery probabi
 - newly acquired users,
 - low-frequency but recently active customers.
 
+## How this is triggered (high-level)
+
+This priority is intended for **early lifecycle** customers where repeat purchase is not yet established and the focus is improving activation and retention foundation.
+
 ## Business Risk
 
 Poor onboarding experiences may reduce long-term retention quality.
@@ -187,6 +208,10 @@ The goal is to convert recent users into repeat-purchase customers.
 - Regular Customers,
 - stable moderate-value users,
 - operational middle-segment customers.
+
+## How this is triggered (high-level)
+
+This priority is intended for customers who are **not currently in high churn risk**, but still benefit from ongoing engagement, cross-sell, and seasonal/loyalty reinforcement.
 
 ## Business Risk
 

@@ -2,6 +2,7 @@
 
 ## Overview
 
+
 Automated customer segmentation systems cannot fully capture all customer behaviors and business complexities.
 
 Certain customers display conflicting or ambiguous signals that require additional manual investigation before retention decisions are made.
@@ -25,6 +26,10 @@ Manual review helps identify high-risk customers that automated scoring may over
 ---
 
 # Case 1 — High-Value but Low Engagement Customers
+
+## Manual decision label (for use in retention prioritization)
+
+**Critical Retention** (if the customer shows churn-risk/disengagement signals despite historically high value).
 
 ## Characteristics
 
@@ -54,6 +59,10 @@ Prioritize proactive engagement recovery before complete churn occurs.
 ---
 
 # Case 2 — Loyal Customers with Negative Support Sentiment
+
+## Manual decision label (for use in retention prioritization)
+
+**Service Recovery**
 
 ## Characteristics
 
@@ -219,4 +228,4 @@ Manual-review workflows help identify:
 
 that automated segmentation systems may fail to detect.
 
-These cases are important for improving retention prioritization accuracy and reducing strategic decision errors.s
+These cases are important for improving retention prioritization accuracy and reducing strategic decision errors.

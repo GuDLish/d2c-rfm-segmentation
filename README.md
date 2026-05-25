@@ -35,17 +35,16 @@ Primary datasets used:
 
 | Dataset | Purpose |
 |---|---|
-| `customers.csv` | Customer profile information |
-| `orders.csv` | Transaction history for RFM calculation |
+| `orders_clean.csv` | Transaction history used to compute customer RFM metrics |
+| `segments.csv` | Output of the RFM segmentation step (customer-level RFM + segment labels) |
 
 Additional reference datasets:
 
 | Dataset | Purpose |
 |---|---|
-| `support_tickets.csv` | Customer dissatisfaction analysis |
-| `web_events_snapshot.csv` | Engagement behavior validation |
-| `churn_labels.csv` | Churn-risk interpretation |
-| `intervention_history.csv` | Historical retention activity |
+| `manual_review_cases.csv` | Example/registry of customers requiring human inspection |
+| `retention_action_list_top200.csv` | Export of the top retention-priority customers for action planning |
+| `customer_intelligence_segments.csv` | Customer intelligence/segment export combining segment + business interpretation (as produced by the notebook) |
 
 ---
 
@@ -87,6 +86,23 @@ The project segments customers into business-focused categories:
 | Recent Customers | Newly active customers with growth potential |
 | Regular Customers | Moderate-value and average-engagement customers |
 | At Risk Customers | Customers showing declining activity and churn indicators |
+
+---
+
+# How segments map to retention priorities
+
+Retention actions are selected from the priority framework in `retention_strategy.md`.
+
+In this package, the intended mapping is:
+
+| Segment (from `segments.csv`) | Primary retention priority group |
+|---|---|
+| Champions | Critical Retention (if churn risk signals are present) |
+| Big Spenders | Critical Retention (if disengagement signals are present) |
+| Loyal Customers | Engagement Recovery |
+| Recent Customers | Onboarding & Nurture |
+| Regular Customers | Regular Engagement |
+| At Risk Customers | Win-Back Campaign |
 
 ---
 
