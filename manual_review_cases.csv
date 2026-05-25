@@ -1,0 +1,11 @@
+case,customer_id,Segment,Recency,Frequency,Monetary,sessions_30d,last_visit_days_ago,sentiment_score,churn_next_60d,reason
+C1 High-value disengaged,CUST01714,Loyal Customers,132,8,7387.29,0,36,-0.42,1,"High Monetary, near-zero sessions, long inactivity"
+C1 High-value disengaged,CUST00993,Loyal Customers,164,7,6785.33,1,39,0.24,1,"High Monetary, near-zero sessions, long inactivity"
+C2 Loyal but unhappy,CUST02154,Loyal Customers,106,16,11777.27,10,24,-0.6266666666666667,0,"Strong purchase history, negative support sentiment"
+C2 Loyal but unhappy,CUST00991,Champions,41,11,11377.01,9,16,-0.745,0,"Strong purchase history, negative support sentiment"
+C4 Churned Champion,CUST02072,Champions,35,11,7176.07,4,1,-0.5,1,Top RFM yet labelled churn — early-warning failure
+C4 Churned Champion,CUST00524,Champions,11,10,7161.96,10,11,0.04500000000000001,1,Top RFM yet labelled churn — early-warning failure
+C5 Low-spend high-engagement,CUST00566,Recent Customers,22,1,657.76,25,3,,0,Future conversion candidate undervalued by RFM
+C5 Low-spend high-engagement,CUST00659,Recent Customers,16,1,883.27,21,0,,0,Future conversion candidate undervalued by RFM
+C6 Conflicting signals,CUST00397,Loyal Customers,79,11,9647.73,3,22,-0.35750000000000004,1,High M + churn=1 + negative sentiment all together
+C6 Conflicting signals,CUST00702,Loyal Customers,77,6,8044.75,2,16,-0.57,1,High M + churn=1 + negative sentiment all together
